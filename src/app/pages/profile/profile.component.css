@@ -1,0 +1,19 @@
+.prfile-container {
+  display: flex;
+}
+.profile-card {
+  margin: auto auto;
+  width: 40%;
+  padding: 2rem;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.profile-pfp {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}

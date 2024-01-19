@@ -1,0 +1,20 @@
+<div class="sidebar-container bg-dark text-white card">
+  <div class="profile-thumbnail card bg-dark">
+    <img
+      [src]="user ? user.photoURL : dummyImage"
+      alt="profile-image"
+      width="70px"
+      height="70px"
+      class="profile-image"
+    />
+    <div class="username">
+      <h6 class="text-white" [ngStyle]="{ border: borderstyle }">
+        {{ user ? user.displayName : "userName" }}
+      </h6>
+    </div>
+  </div>
+  <button class="m-2" routerLink="/profile">edit profile</button>
+  <button class="m-2" (click)="authService.logOut()">
+    log out <i class="fa-solid fa-arrow-right-from-bracket"></i>
+  </button>
+</div>

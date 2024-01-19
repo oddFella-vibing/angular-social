@@ -1,0 +1,25 @@
+<div class="prfile-container">
+  <div class="card bg-dark profile-card">
+    <div class="profile-image">
+      <input type="file" name="imgInput" id="imgInput" style="display: none" (change)="onFileUpload($event)" />
+      <label for="imgInput"> <img [src]="imgSrc" class="profile-pfp" /></label>
+    </div>
+   
+    <div class="username-container">
+      <div class="input-form" *ngIf="editing; else currentusername">
+        <input type="text" class="form-control" [(ngModel)]="userName" />
+      </div>
+      <ng-template #currentusername>
+        <h2 class="text-white">
+          {{ userName }}
+          <i class="fa-solid fa-pen-to-square fa-sm" (click)="onEdit()"></i>
+        </h2>
+      </ng-template>
+    </div>
+
+    <div class="color-square">choose color</div>
+    <button (click)="onUpdate()">save</button>
+  </div>
+</div>
+
+

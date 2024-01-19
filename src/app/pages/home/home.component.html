@@ -1,0 +1,13 @@
+<div class="home-container">
+  <div class="side-bar bg-dark">
+    <app-side-bar [user]="user$ | async"></app-side-bar>
+  </div>
+  <div class="post-list-container bg-dark">
+    <div class="main-content-list">
+      <app-content-form [user]="user$ | async"></app-content-form>
+      <div *ngFor="let content of contentList$ | async">
+        <app-single-post [post]="content"></app-single-post></div>
+     
+    </div>
+  </div>
+</div>

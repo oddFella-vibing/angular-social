@@ -1,0 +1,23 @@
+.sidebar-container {
+  border: none;
+}
+.profile-thumbnail {
+  display: flex;
+  flex-direction: row;
+
+  text-align: center;
+  gap: 20px;
+}
+.username {
+    
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.username h6 {
+  border-radius: 5px;
+ 
+}
+.profile-image {
+  border-radius: 50%;
+}

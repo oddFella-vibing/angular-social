@@ -1,0 +1,29 @@
+<!-- pfp name content -->
+<div
+  class="card text-white post-container"
+  [ngStyle]="{ border: '1px solid ' + chosen_color }"
+>
+  <div class="user-info">
+    <img
+      [src]="post?.userImage ? post?.userImage : dummyImage"
+      alt="pfp"
+      class="pfp-image"
+    />
+    <p>{{ post?.username }}</p>
+  </div>
+  <div class="post-content">
+    <p>{{ post?.content }}</p>
+  </div>
+  <div class="post-footer">
+    <i
+      class="fa-solid fa-heart"
+      *ngIf="liked_current; else liked"
+      (click)="onlike()"
+    ></i>
+    <ng-template #liked>
+      <i class="fa-regular fa-heart" #liked (click)="onlike()"></i
+    ></ng-template>
+
+    <i class="fa-solid fa-comment-dots"></i>
+  </div>
+</div>

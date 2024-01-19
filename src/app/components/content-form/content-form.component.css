@@ -1,0 +1,26 @@
+.content-form-container {
+  width: 100%;
+  margin: 20px 0px;
+  display: flex;
+  flex-direction: row;
+}
+input {
+  width: 90%;
+  background-color: #212529;
+  color: rgb(188, 188, 188);
+  padding: 10px;
+  outline: none;
+}
+
+.icons-bar {
+  width: 10%;
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 10px;
+  border:1px solid black
+}
+.icons-bar:hover{
+    color: rgb(0, 255, 0);
+    border: 1px solid rgb(0, 255, 0);
+}
